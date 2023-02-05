@@ -1,0 +1,26 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhongyijun1/sprincloud-config.git #git@github.com:zhongyijun1/sprincloud-config.git #git@github.com:zhongyijun1/sprincloud-config.git
+
+          search-paths:
+            - sprincloud-config
+          username: zhongyijun1
+          password: zyj520***
+          timeout: 500
+#          skip-ssl-validation: true
+          default-label: main
+#      label: main
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
